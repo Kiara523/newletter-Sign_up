@@ -1,0 +1,228 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"); */
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/assets/fonts/Roboto-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/assets/fonts/Roboto-Bold.ttf");
+  font-weight: 700;
+}
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --primary-color: hsl(234, 29%, 20%);
+  --secondary-light: hsl(231, 7%, 60%);
+  --secondary-Dark: hsl(235, 18%, 26%);
+  --accent-color-1: hsl(4, 100%, 67%);
+  --accent-color2: hsl(339, 100%, 62%);
+
+  --ff: "Roboto", Arial, Helvetica, sans-serif;
+  --fw-regular: 400;
+  --fw-bold: 700;
+}
+
+/* small reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input {
+  font-family: inherit;
+  font-weight: inherit;
+}
+
+/* remove ul list styles */
+ul[role="list"] {
+  list-style: none;
+}
+
+body {
+  min-height: 100svh;
+  font-family: var(--ff);
+  font-weight: var(--fw-regular);
+  color: var(--primary-color);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  background-color: var(--primary-color);
+  display: grid;
+  place-content: center;
+}
+
+.success-message {
+  background-color: white;
+  height: 100svh;
+  display: grid;
+  padding: 1.5rem;
+
+  display: none;
+}
+
+.confirmation {
+  align-self: center;
+}
+
+.dismiss {
+  margin-bottom: 3rem;
+  align-self: end;
+}
+
+.confirmation-title {
+  line-height: 1;
+  margin-block: 1.5rem;
+}
+
+.registered-email {
+  font-weight: var(--fw-bold);
+}
+
+.grid-container {
+  display: grid;
+  place-content: center;
+}
+
+.sign-up-form {
+  max-width: 800px;
+  background-color: var(--background);
+  border-radius: 1rem;
+}
+
+.mobile img {
+  margin-inline: auto;
+}
+
+.section-title {
+  font-weight: var(--fw-bold);
+  font-size: 2rem;
+}
+
+.list-container {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.list-item {
+  display: grid;
+  grid-template-columns: 2.5rem auto;
+}
+
+.list-item::before {
+  content: url(/assets/images/icon-list.svg);
+}
+
+.form-group {
+  font-size: 0.7rem;
+  font-weight: var(--fw-bold);
+
+  display: grid;
+  gap: 0.5rem;
+}
+
+.form-group__error {
+  grid-template-columns: 1fr 1fr;
+}
+
+.error-message {
+  text-align: end;
+  color: var(--accent-color-1);
+}
+
+.email-input {
+  padding: 1rem;
+  outline: none;
+  border-radius: 0.5rem;
+  /* border: 1px solid --secondary-light; */
+
+  grid-column: span 2;
+}
+
+.email-input::placeholder {
+  color: var(--secondary-light);
+}
+
+.btn {
+  background-color: var(--primary-color);
+  color: var(--background);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+
+  position: relative;
+}
+
+.btn:hover,
+.btn:focus-visible {
+  background: linear-gradient(
+    -90deg,
+    var(--accent-color-1),
+    var(--accent-color2)
+  );
+}
+
+.btn:hover::after,
+.btn:focus-visible::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0; /* as right:0 left:0 bottom:0 */
+  border-radius: inherit;
+  background: inherit;
+  translate: 0 1rem;
+  filter: blur(1rem);
+  opacity: 0.3;
+}
+
+.section-description {
+  padding: 1.5rem;
+
+  display: grid;
+  place-content: center;
+  gap: 1.25rem;
+}
+
+.form {
+  margin-block-start: 1.25rem;
+  display: grid;
+  gap: 1.5rem;
+
+  isolation: isolate;
+}
+
+@media (min-width: 750px) {
+  .sign-up-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1rem;
+    margin-inline: 1rem;
+  }
+
+  .success-message {
+    max-width: 300px;
+    height: auto;
+    border-radius: 20px;
+    padding: 3rem;
+    gap: 2rem;
+  }
+
+  .dismiss {
+    margin-bottom: 0;
+  }
+
+  .section-description {
+    grid-column: 1;
+    grid-row: 1;
+  }
+}
