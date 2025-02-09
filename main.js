@@ -14,7 +14,7 @@ function formValidation() {
   const emailValue = email.value.trim();
   if (emailValue === 0 || !isValidEmail(emailValue)) {
     email.style.backgroundColor = "rgba(255, 98, 87, 0.17)";
-    setError("Email address required");
+    setError(errorHolder, "Email address required");
   } else {
     //clear error message
     errorHolder.innerHTML = "";
@@ -34,9 +34,9 @@ const isValidEmail = (email) => {
   return re.test(String(email).toLowerCase());
 };
 
-function setError(message) {
-  errorHolder.innerText = message;
-  errorHolder.setAttribute("class", "error-message");
+function setError(element, message) {
+  element.innerText = message;
+  element.setAttribute("class", "error-message");
 }
 
 function toInitialPage() {

@@ -41,7 +41,6 @@ img {
 button,
 input {
   font-family: inherit;
-  font-weight: inherit;
 }
 
 /* remove ul list styles */
@@ -54,7 +53,7 @@ body {
   font-family: var(--ff);
   font-weight: var(--fw-regular);
   color: var(--primary-color);
-  font-size: 0.9rem;
+  font-size: 1rem;
   line-height: 1.5;
   background-color: var(--primary-color);
   display: grid;
@@ -105,7 +104,7 @@ body {
 
 .section-title {
   font-weight: var(--fw-bold);
-  font-size: 2rem;
+  font-size: 3.3rem;
 }
 
 .list-container {
@@ -123,7 +122,7 @@ body {
 }
 
 .form-group {
-  font-size: 0.7rem;
+  font-size: 0.725rem;
   font-weight: var(--fw-bold);
 
   display: grid;
@@ -150,11 +149,14 @@ body {
 
 .email-input::placeholder {
   color: var(--secondary-light);
+  font-size: 1rem;
 }
 
 .btn {
   background-color: var(--primary-color);
   color: var(--background);
+  font-size: 1rem;
+  font-weight: var(--fw-bold);
   padding: 1rem;
   border-radius: 0.5rem;
   border: none;
