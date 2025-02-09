@@ -16,7 +16,10 @@ function formValidation() {
     email.style.backgroundColor = "rgba(255, 98, 87, 0.17)";
     setError("Email address required");
   } else {
+    //clear error message
     errorHolder.innerHTML = "";
+
+    // hide form page and show success message
     signUpForm.style.display = "none";
     successMessage.style.display = "grid";
     const registeredEmail = document.querySelector(".registered-email");
