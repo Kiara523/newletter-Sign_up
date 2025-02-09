@@ -34,7 +34,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: https://github.com/Kiara523/newletter-Sign_up
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: https://kiara523.github.io/newletter-Sign_up/
 
 ## My process
 

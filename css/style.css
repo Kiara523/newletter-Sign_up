@@ -2,13 +2,13 @@
 
 @font-face {
   font-family: "Roboto";
-  src: url("/assets/fonts/Roboto-Regular.ttf");
+  src: url("./assets/fonts/Roboto-Regular.ttf");
   font-weight: 400;
 }
 
 @font-face {
   font-family: "Roboto";
-  src: url("/assets/fonts/Roboto-Bold.ttf");
+  src: url("./assets/fonts/Roboto-Bold.ttf");
   font-weight: 700;
 }
 
@@ -119,7 +119,7 @@ body {
 }
 
 .list-item::before {
-  content: url(/assets/images/icon-list.svg);
+  content: url(./assets/images/icon-list.svg);
 }
 
 .form-group {
