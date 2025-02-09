@@ -119,7 +119,7 @@ body {
 }
 
 .list-item::before {
-  content: url(./assets/images/icon-list.svg);
+  content: url(../assets/images/icon-list.svg);
 }
 
 .form-group {
